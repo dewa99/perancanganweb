@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<style type="text/css">
+	#nama{
+		/*display: none;*/
+		opacity: 0;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		font-family: arial;
+		padding: 100px;
+		position: absolute;
+		left: calc(50% - 200px) ;
+		top:150px;
+		background-color: blue;
+		transition: 1s;
+		/*min-width: 150px;*/
+	}
+
+	/*button{/**/
+		/*padding: 10px;*/
+		/*font-size: 30px;*/
+	/*}*/
+</style>
+<body>
+	<button onmouseenter="openModal(this)" onclick="
+	var a = a != 0 ? 1 : a + 1;
+	alert('a = ' + a); 
+	// alert('b');
+	">buka</button>
+
+	<table>
+		<tr>
+			<td>Nama</td>
+			<td>Kelas</td>
+			<td>Nim</td>
+			<td>Aksi</td>
+		</tr>
+		<tr>
+			<td>Dewa</td>
+			<td>TI</td>
+			<td>2023</td>
+			<td><button>Lihat Detail</button></td>
+		</tr>
+		<tr>
+			<td>Bagas</td>
+			<td>TI</td>
+			<td>2020</td>
+			<td><button>Lihat Detail</button></td>
+		</tr>
+		<!-- <tr></tr> -->
+
+	</table>
+
+	<div>
+		Detail
+		nama : Dewa
+		kelas : ti
+		nim : 2023
+	</div>
+
+	<div id="nama">
+		Tugas : buatlah satu form dengan minimal 3 input dan tampilkan data dalam list pada table dan berikan button untuk melihat detail data
+	</div>
+
+	<script type="text/javascript">
+		function getId(name){
+			return document.getElementById(name);
+		}
+
+		function getClass(name){
+			return document.getElementsByClassName(name);
+		}
+
+		function openModal(button){
+			var ambil = getId('nama');
+			ambil.style = ambil.style.opacity == 0 ? 'opacity: 100': 'opacity: 0';
+			button.innerHTML = button.innerHTML == 'buka' ? 'tutup' : 'buka';
+
+		}
+
+		// var div	= document.getElementsByTagName('div');
+		// console.log(div);
+
+		// var nama = getId('nama');
+		// alert("nama : " + nama.innerHTML);
+		// var kelas = getClass('kelas');
+		// alert(kelas[1].innerHTML);
+		// console.log(kelas);
+
+
+
+	</script>
+</body>
+</html>
