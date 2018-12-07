@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tes</title>
+</head>
+
+	<style type="text/css">
+		body
+		{
+			background: #fff;
+		}
+	</style>
+<body>
+
+<div>
+
+	<label for="username">Username</label>
+
+		<input type="text" id="username">
+
+	<label for="password">Password</label>
+		<input type="password" id="password">
+		<button onclick="lihat()">go</button>
+
+	<button onclick="login()">Login</button>
+
+		<br>
+	<i id="show"></i>
+</div>
+
+
+	<script>
+		function lihat()
+		{
+			if(document.getElementById('password').getAttribute('type') == 'text')
+			{
+				document.getElementById('password').setAttribute('type','password')
+			}
+			else{
+			document.getElementById('password').setAttribute('type','text');
+			}
+		}
+
+		function login()
+		{
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+
+			console.log(username);
+
+			if(username=='admin' && password =='admin')
+			{
+				// document.getElementById('show').innerHTML = username;
+				document.getElementsByTagName('body')[0].setAttribute('style','background : red');	
+				// window.location.href = 'http://localhost/PW/admin.html';
+			}
+			else if(username=='user' && password =='user')
+			{
+				 document.getElementsByTagName('body')[0].setAttribute('style','background : green');
+			}
+			else
+			{
+				alert('salah');
+			}
+		}
+
+	</script>
+
+</body>
+</html>

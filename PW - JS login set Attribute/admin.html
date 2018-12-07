@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>admin</title>
+</head>
+<body>
+halo admin
+<br><br>
+<label for="nama">Nama Album</label>
+<input type="text" name="nama" id="nama-album">
+<button onclick="setNama()">Submit</button>
+
+
+<ul id="album"></ul>
+
+
+<script>
+
+	function setNama()
+	{
+		document.getElementById('album').innerHTML
+
+		+= '<li>' +document.getElementById('nama-album').value+'</li>';
+
+	}
+
+</script>
+
+
+</body>
+</html>
